@@ -1,9 +1,8 @@
 import 'dotenv/config';
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
+import { Aeroporto } from '../Model/Aeroporto';
 
-import { Editora } from '../Model/editora';
-import { Autor } from '../Model/autor';
 
 
 const AppDataSource = new DataSource({
@@ -13,7 +12,7 @@ const AppDataSource = new DataSource({
   username: 'system',
   password: 'pulsati2023',
   database: 'xe',
-  entities: [Editora, Autor],
+  entities: [ Aeroporto ],
   migrations: [`${__dirname}/**/migrations/*.{ts,js}`],
   synchronize: true,
 });
