@@ -1,11 +1,12 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity('ste_aeroportos')
-export class Aeroporto {
+@Entity('ste_autores')
+export class Autor {
   @PrimaryGeneratedColumn()
-  id: number;
+  codigo: number;
 
   @Column({ type: "varchar2", nullable: false })
   nome: string;
 
+  
 }   
